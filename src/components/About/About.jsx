@@ -20,14 +20,18 @@ function About() {
             <h3>Developer Skills</h3>
             <div className="dev-skills-container">
               {skillsData[0].map((d, i) => (
-                <div className="tooltip-container">
+                <div className="tooltip-container" key={i}>
                   <div
                     className="skill-img"
                     id={d.title}
-                    key={i}
+                    key={d.title}
                     data-tooltip={d.title}
                   >
-                    <img src={process.env.PUBLIC_URL + d.img} alt={d.title} />
+                    <img
+                      src={process.env.PUBLIC_URL + d.img}
+                      alt={d.title}
+                      key={i * 10}
+                    />
                   </div>
                 </div>
               ))}
@@ -39,14 +43,18 @@ function About() {
             <h3>Designer Skills</h3>
             <div className="des-skills-container">
               {skillsData[1].map((d, i) => (
-                <div className="tooltip-container">
+                <div className="tooltip-container" key={i * 18}>
                   <div
                     className="skill-img"
                     id={d.title}
-                    key={i}
+                    key={d.title}
                     data-tooltip={d.title}
                   >
-                    <img src={process.env.PUBLIC_URL + d.img} alt={d.title} />
+                    <img
+                      src={process.env.PUBLIC_URL + d.img}
+                      alt={d.title}
+                      key={i * 11}
+                    />
                   </div>
                 </div>
               ))}

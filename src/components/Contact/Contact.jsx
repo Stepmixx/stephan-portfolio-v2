@@ -6,10 +6,15 @@ function Contact() {
     <div className="contact" id="contact">
       <div className="contact-container">
         <h2>Contact</h2>
-        <form action="https://www.freecodecamp.com/email-submit" id="form">
+        <form
+          action="https://formsubmit.co/stephancalderin@gmail.com"
+          id="form"
+          method="POST"
+        >
           <label>Email</label>
           <input
             type="email"
+            name="email"
             id="email"
             placeholder="Enter your email"
             required
@@ -17,6 +22,7 @@ function Contact() {
           <label>Message</label>
           <textarea
             id="message"
+            name="message"
             placeholder="Enter your message (optional)..."
           ></textarea>
           <button type="submit">Submit</button>

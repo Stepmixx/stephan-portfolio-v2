@@ -27,6 +27,15 @@
       font-size: $twoRemSize;
       color: $secondaryColor;
     }
+
+    .ityped-cursor {
+      animation: blink 0.6s infinite;
+    }
+    @keyframes blink {
+      100% {
+        opacity: 0;
+      }
+    }
   }
   a {
     overflow-y: hidden;
@@ -62,7 +71,7 @@
         line-height: $fourRemSize;
         overflow-y: hidden;
       }
-      h2 {
+      span {
         margin-top: $oneRemSize;
         width: 60%;
         font-size: $oneAndHalfRemSize;
