@@ -1,0 +1,72 @@
+@import "../../global.scss";
+
+.home {
+  background: $tertiaryColor;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .title-wrapper {
+    width: 100%;
+    background-color: $primaryColor;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 50% 50%;
+    h1 {
+      font-family: Poppins;
+      font-size: $fourRemSize;
+      color: $tertiaryColor;
+      text-align: center;
+      font-weight: bold;
+    }
+    h2 {
+      text-align: center;
+      font-size: $twoRemSize;
+      color: $secondaryColor;
+    }
+  }
+  a {
+    overflow-y: hidden;
+    height: $threeRemSize;
+    margin-top: 12vh;
+    transition: all ease 0.5s;
+    animation: blink 0.5s infinite;
+    &:hover {
+      margin-top: 12.5vh;
+      animation: none;
+    }
+    .fa-chevron-down {
+      color: $primaryColor;
+      font-size: $threeRemSize;
+    }
+    @keyframes blink {
+      100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .home {
+    .title-wrapper {
+      h1 {
+        width: 80%;
+        font-size: $threeRemSize;
+        line-height: $fourRemSize;
+        overflow-y: hidden;
+      }
+      h2 {
+        margin-top: $oneRemSize;
+        width: 60%;
+        font-size: $oneAndHalfRemSize;
+      }
+    }
+  }
+}
