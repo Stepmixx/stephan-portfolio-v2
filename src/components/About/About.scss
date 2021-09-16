@@ -185,7 +185,7 @@
             width: 50%;
             justify-content: space-between;
             .skill-img {
-              margin-top: $threeRemSize;
+              margin-top: $twoRemSize;
             }
           }
         }
@@ -217,11 +217,19 @@
           .dev-skills-container {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(3, 1fr);
+            .tooltip-container {
+              .skill-img {
+                margin-top: $twoRemSize;
+              }
+            }
           }
         }
       }
       .left {
         grid-row: 3;
+        .designer-skills {
+          margin-top: 40px;
+        }
       }
     }
   }
